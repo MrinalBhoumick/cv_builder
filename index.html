@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <title></title>
+    <!--include bootstrap css-->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css"/>
+    <!---------Custom CSS-------------------------------->
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+    <!--------------Font Awersome --------------------------------------->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+    body{
+      margin: 0;
+      padding: 0;
+      background:rgba(250, 214, 42,0.7);
+      background-size: contain;
+
+    }
+    .form-control:focus {
+
+    border-color:rgb(0, 105, 217)
+
+    box-shadow: 0 0 0 0.2rem rgba(0, 105, 217,1);
+    }
+    #btn{
+      display: block;
+    }
+
+    </style>
+
+
+
+</head>
+<body>
+
+  <div class="container-fluid" id="main" style="display:block;">
+  <br>
+  <div class="jumbotron">
+  <h1 class="display-4">CV Builder!</h1>
+  <p class="lead">This is a simple CV builder web app created by using HTML,CSS And JavaScript.I hope you like it.</p>
+</div>
+    <div class="row">
+      <div class="col-md-6">
+  <form>
+  <h4 class="text-center">Personal Information</h4>
+  <div class="form-group row">
+    <label for="" class="col-sm-3 col-form-label">Profile Image :</label>
+    <div class="col-sm-9">
+
+  <input type="file" class="form-control" id="imgField">
+
+  </div>
+
+
+
+</div>
+  <div class="form-group row">
+    <label for="" class="col-sm-3 col-form-label">First Name :</label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control" id="first_name" >
+    </div>
+  </div>
+   <div class="form-group row">
+    <label for="" class="col-sm-3 col-form-label">Second Name :</label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control" id="second_name" >
+    </div>
+  </div>
+  <h4 class="text-center">Contact</h4>
+  <div class="form-group row">
+    <label for="" class="col-sm-3 col-form-label">Address :</label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control" id="address">
+    </div>
+    </div>
+    <div class="form-group row">
+    <label for="" class="col-sm-3 col-form-label">Phone No :</label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control" id="phone_no" >
+    </div>
+    </div>
+    <h4 class="text-center">Social Media</h4>
+  <div class="form-group row">
+    <label for="" class="col-sm-3 col-form-label">Email :</label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control" id="email" placeholder="example@gmail.com">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="" class="col-sm-3 col-form-label">Facebook Link :</label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control" id="facebook_link" placeholder="https://facebook.com">
+    </div>
+
+    </div>
+    <h4 class="text-center">Languages</h4>
+    <div class="form-group row">
+    <label for="" class="col-sm-3 col-form-label">Language I:</label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control" id="language1_value" placeholder="English">
+    </div>
+
+
+  </div>
+  <div class="form-group row">
+    <label for="" class="col-sm-3 col-form-label">Level :</label>
+    <div class="col-sm-9">
+      <input type="number" class="form-control" id="language1_level" placeholder="70%">
+    </div>
+    </div>
+    <div class="form-group row">
+    <label for="" class="col-sm-3 col-form-label">Language II:</label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control" id="language2_value" placeholder="French">
+    </div>
+
+
+  </div>
+  <div class="form-group row">
+    <label for="" class="col-sm-3 col-form-label">Level :</label>
+    <div class="col-sm-9">
+      <input type="number" class="form-control" id="language2_level" placeholder="70%">
+    </div>
+    </div>
+
+
+    <h4 class="text-center">Professional Skills I</h4>
+    <div class="form-group row">
+    <label for="" class="col-sm-3 col-form-label">Skill Name :</label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control" id="skill1_value" placeholder="HTML">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="" class="col-sm-3 col-form-label">Level :</label>
+    <div class="col-sm-9">
+      <input type="number" class="form-control" id="skill1_level" placeholder="70%">
+    </div>
+  </div>
+  <h4 class="text-center">Professional Skills II</h4>
+    <div class="form-group row">
+    <label for="" class="col-sm-3 col-form-label">Skill Name :</label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control" id="skill2_value" placeholder="HTML">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="" class="col-sm-3 col-form-label">Level :</label>
+    <div class="col-sm-9">
+      <input type="number" class="form-control" id="skill2_level" placeholder="70%">
+    </div>
+  </div>
+  <h4 class="text-center">Professional Skills III</h4>
+    <div class="form-group row">
+    <label for="" class="col-sm-3 col-form-label">Skill Name :</label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control" id="skill3_value" placeholder="HTML">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="" class="col-sm-3 col-form-label">Level :</label>
+    <div class="col-sm-9">
+      <input type="number" class="form-control" id="skill3_level" placeholder="70%">
+    </div>
+  </div>
+  <h4 class="text-center">Professional Skills IV</h4>
+    <div class="form-group row">
+    <label for="" class="col-sm-3 col-form-label">Skill Name :</label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control" id="skill4_value" placeholder="HTML">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="" class="col-sm-3 col-form-label">Level :</label>
+    <div class="col-sm-9">
+      <input type="number" class="form-control" id="skill4_level" placeholder="70%">
+    </div>
+  </div>
+
+
+
+</form>
+</div>
+<div class="col-md-6">
+  <h4 class="text-center">A Level Education</h4>
+  <div class="form-group row">
+    <label for="" class="col-sm-3 col-form-label">Degree Title :</label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control" id="alevel_value" placeholder="Matriculation">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="" class="col-sm-3 col-form-label">School Name :</label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control" id="alevel_school" >
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="" class="col-sm-3 col-form-label">Marks Grade :</label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control" id="alevel_grade" placeholder="A+">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="" class="col-sm-3 col-form-label">Starting Date :</label>
+    <div class="col-sm-9">
+      <input type="date" class="form-control" id="alevel_start" placeholder="">
+    </div>
+  </div>
+    <div class="form-group row">
+    <label for="" class="col-sm-3 col-form-label">Ending Date :</label>
+    <div class="col-sm-9">
+      <input type="date" class="form-control" id="alevel_end" placeholder="">
+    </div>
+  </div>
+ <h4 class="text-center">O Level Education</h4>
+  <div class="form-group row">
+    <label for="" class="col-sm-3 col-form-label">Degree Title :</label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control" id="olevel_value" placeholder="Intermediate">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="" class="col-sm-3 col-form-label">School Name :</label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control" id="olevel_school" >
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="" class="col-sm-3 col-form-label">Marks Grade :</label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control" id="olevel_grade" placeholder="A+">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="" class="col-sm-3 col-form-label">Starting Date :</label>
+    <div class="col-sm-9">
+      <input type="date" class="form-control" id="olevel_start" placeholder="">
+    </div>
+  </div>
+    <div class="form-group row">
+    <label for="" class="col-sm-3 col-form-label">Ending Date :</label>
+    <div class="col-sm-9">
+      <input type="date" class="form-control" id="olevel_end" placeholder="">
+    </div>
+  </div>
+  <h4 class="text-center">Graduation</h4>
+  <div class="form-group row">
+    <label for="" class="col-sm-3 col-form-label">Degree Title :</label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control" id="grad_value" placeholder="Bachelor">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="" class="col-sm-3 col-form-label">School Name :</label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control" id="grad_school">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="" class="col-sm-3 col-form-label">Marks Grade :</label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control" id="grad_grade" placeholder="A+">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="" class="col-sm-3 col-form-label">Starting Date :</label>
+    <div class="col-sm-9">
+      <input type="date" class="form-control" id="grad_start" placeholder="">
+    </div>
+  </div>
+    <div class="form-group row">
+    <label for="" class="col-sm-3 col-form-label">Ending Date :</label>
+    <div class="col-sm-9">
+      <input type="date" class="form-control" id="grad_end" placeholder="">
+    </div>
+  </div>
+ <h4 class="text-center">Certification I</h4>
+ <div>
+  <div class="form-group row">
+    <label for="" class="col-sm-3 col-form-label">Title :</label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control" id="cert1_value" placeholder="CISCO Networking Associate">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="" class="col-sm-3 col-form-label">Provider :</label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control" id="cert1_provider" placeholder="CISCO">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="" class="col-sm-3 col-form-label">Marks Grade :</label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control" id="cert1_grade" placeholder="A+">
+    </div>
+  </div>
+  </div>
+  <div>
+    <h4 class="text-center">Certification II</h4>
+  <div class="form-group row">
+    <label for="" class="col-sm-3 col-form-label">Title :</label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control" id="cert2_value" placeholder="CISCO Networking Associate">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="" class="col-sm-3 col-form-label">Provider :</label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control" id="cert2_provider" placeholder="CISCO">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="" class="col-sm-3 col-form-label">Marks Grade :</label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control" id="cert2_grade" placeholder="A+">
+    </div>
+  </div>
+  </div>
+
+
+</div>
+</div>
+</div>
+<!----------------------CV--------------------------------->
+    <div class="main-container" id="second_div" style="display: none;">
+      
+        <div class="container">
+            <div class="left-cont">
+                <div>
+                    <img src="" id="profile_img" height="340px" width="340px" />
+
+                </div>
+                <div>
+
+                    <h1  class="name-h"><span id="first_n" class="m"></span><br><span id="second_n" class="name-h"></span></h1>
+
+
+                </div>
+                <div>
+                    <h2 class="pro">Profile</h2>
+                    <p class="par">A highly motivated student looking for a first time position within a retail environment.Throughout my education,I have demonstrated high levels of motivation,work ethic and teamwork to achieve my predicted grades.I wish to utilise these skills to work with customers and their needs.</p>
+
+                </div>
+                <div>
+                    <h2 class="pro">Contact</h2>
+                    <p class="par" ><i class="fa fa-map-marker fa-2x icon"></i><span class="data"><span id="address_"></span></i></p>
+                    <p class="par"><i class="fa fa-phone fa-2x icon"></i><span class="data" id="cell"></span></i></p>
+
+                </div>
+                <div>
+                    <h2 class="pro">Social Media</h2>
+                    <p class="par"><i class="fa fa-google fa-2x icon"></i><span class="data" id="mail"></span></i></p>
+                    <p class="par"><i class="fa fa-facebook fa-2x icon"></i><span class="data"><a id="fb" href="" target="_blank" class="anc"></a></span></i></p>
+
+                </div>
+
+
+
+
+            </div>
+
+            <div class="right-cont">
+                <div class="s-div">
+
+                    <h2 class="had"><i class="fa fa-book fa-lg icon1"></i><span class="educ">Education</span></h2>
+                    <div class="line">
+                        <div class="sub-line"></div>
+                    </div>
+                    <div class="main-con">
+                        <div class="sub-con1">
+                            <ul class="main-li">
+                                <li > <span id="a_start"></span>-<span id="a_end"></span></li>
+                                <li > <span id="o_start"></span>-<span id="o_end"></span></li>
+                                <li > <span id="b_start"></span>-<span id="b_end"></span></li>
+
+
+                            </ul>
+
+
+                        </div>
+                        <div class="sub-con2">
+                            <ul>
+                                <li ><span id="matric_title" ></span></li>
+                                <li><span id="matric_board"></span></li>
+                                <li><span id="matric_grade"></span>&nbsp;Division</li>
+
+
+                            </ul>
+                            <ul>
+                                <li><span id="inter_title" ></span></li>
+                                <li><span id="inter_board" ></span></li>
+                                <li><span id="inter_grade" ></span>&nbsp;Division</li>
+
+
+
+                            </ul>
+                            <ul>
+                                <li><span id="bach_title" ></span></li>
+                                <li><span id="bach_board" ></span></li>
+                                <li><span id="bach_grade" ></span>&nbsp;Division</li>
+
+
+
+                            </ul>
+
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="s-div">
+
+                    <h2 class="had had2"><i class="fa fa-certificate fa-lg icon1 icon2"></i><span>Certification</span></h2>
+                    <div class="line line1">
+                        <div class="sub-line"></div>
+                    </div>
+                    <div class="main-con">
+                        <div class="sub-con7">
+                            <ul class="main-li">
+                                <li><span id="cer1_val" ></span></li>
+                                <li><span id="cer2_val" ></span></li>
+
+
+
+                            </ul>
+
+
+                        </div>
+                        <div class="sub-con8">
+                            <ul>
+                                <li><span id="cer1_value" ></span></li>
+                                <li><span id="cer1_provider" ></span></li>
+                                <li>Marks Ratio <span id="cer1_grade" ></span></li>
+
+
+                            </ul>
+                            <ul>
+                                <li><span id="cer2_value" ></span></li>
+                                <li><span id="cer2_provider" ></span></li>
+                                <li>Marks Ratio <span id="cer2_grade" ></span></li>
+
+
+
+                            </ul>
+
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="s-div">
+
+                    <h2 class="had had2"><i class="fa fa-code fa-lg icon1 icon2"></i><span>Professional Skills</span></h2>
+                    <div class="line line1">
+                        <div class="sub-line"></div>
+                    </div>
+                    <div class="main-con">
+                        <div class="sub-con3">
+                            <ul class="main-li2">
+                                <li id="skill1"></li>
+                                <li id="skill2"></li>
+                                <li id="skill3"></li>
+                                <li id="skill4"></li>
+
+
+
+
+
+                            </ul>
+
+
+                        </div>
+                        <div class="sub-con4">
+                            <ul>
+
+
+                                <li>
+                                    <div class="prov">
+                                        <div id="pro-value3"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="prov">
+                                        <div id="pro-value4"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="prov">
+                                        <div id="pro-value5"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="prov">
+                                        <div id="pro-value6" style="width: 100px;"></div>
+                                    </div>
+                                </li>
+                            </ul>
+
+
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="s-div1">
+
+                    <h2 class="had had2"><i class="fa fa-language fa-lg icon1 icon2"></i><span>Languages</span></h2>
+                    <div class="line line1">
+                        <div class="sub-line"></div>
+                    </div>
+                    <div class="main-con">
+                        <div class="sub-con3">
+                            <ul class="main-li2">
+                                <li id="lang1_value"></li>
+                                <li id="lang2_value"></li>
+
+
+
+                            </ul>
+
+
+                        </div>
+                        <div class="sub-con4">
+                            <ul>
+                                <li>
+                                    <div class="prov">
+                                        <div id="pro-value9"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="prov">
+                                        <div id="pro-value10"></div>
+                                    </div>
+                                </li>
+
+                            </ul>
+
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+        </div>
+        <button id="download" class="btn btn-primary btn-center">Download <i class="fa fa-download"></i></button>
+    </div>
+
+<!-----------------------CV End----------------------------><center>
+<button id="btn" class="btn btn-primary btn-lg btn-center">Create CV</button></center><br>
+  <!--include bootstrap javaScript-->
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+
+  <!--include bootstrap JQuery-->
+  <script src="bootstrap/js/jquery-3.4.1.min.js"></script>
+<script>
+  var link;
+  var first_n=document.getElementById("first_n");
+  var second_n=document.getElementById('second_n');
+  var second_div=document.getElementById('second_div');
+  var btn=document.getElementById('btn');
+  var address_=document.getElementById('address_');
+   var first_div=document.getElementById('main');
+   var mail=document.getElementById('mail');
+   var fb=document.getElementById('fb');
+   var profile_img=document.getElementById('profile_img');
+   var matric_title=document.getElementById('matric_title');
+   var matric_board=document.getElementById('matric_board');
+   var matric_grade=document.getElementById('matric_grade');
+   var inter_title=document.getElementById('inter_title');
+   var inter_board=document.getElementById('inter_board');
+   var inter_grade=document.getElementById('inter_grade');
+   var bach_title=document.getElementById('bach_title');
+   var bach_board=document.getElementById('bach_board');
+   var bach_grade=document.getElementById('bach_grade');
+   var cer1_value=document.getElementById('cer1_value');
+  var cer1_provider=document.getElementById('cer1_provider');
+  var cer1_grade=document.getElementById('cer1_grade');
+   var cer2_value=document.getElementById('cer2_value');
+  var cer2_provider=document.getElementById('cer2_provider');
+  var cer2_grade=document.getElementById('cer2_grade');
+  var lang1_value=document.getElementById('lang1_value');
+  var lang2_value=document.getElementById('lang2_value');
+  var lang1_bar=document.getElementById('pro-value9');
+  var lang2_bar=document.getElementById('pro-value10');
+  var skill1=document.getElementById('skill1');
+  var skill2=document.getElementById('skill2');
+  var skill3=document.getElementById('skill3');
+  var skill4=document.getElementById('skill4');
+  var skill1_val=document.getElementById('pro-value3');
+  var skill2_val=document.getElementById('pro-value4');
+  var skill3_val=document.getElementById('pro-value5');
+  var skill4_val=document.getElementById('pro-value6');
+   var cell_no=document.getElementById('cell');
+   var cer1_val=document.getElementById('cer1_val');
+   var cer2_val=document.getElementById('cer2_val');
+   btn.onclick=click;
+
+   function upload(path){
+     var path1=path.split('fakepath\\');
+     this.link=path1;
+   }
+   function click(){
+  var olevel_start=document.getElementById('olevel_start').value;
+  
+  
+  var first_name=document.getElementById('first_name').value;
+  var second_name=document.getElementById('second_name').value;
+  var address=document.getElementById('address').value;
+  var phone_no=document.getElementById('phone_no').value;
+  var email=document.getElementById('email').value;
+  var facebook_link=document.getElementById('facebook_link').value;
+  var language1_value=document.getElementById('language1_value').value;
+  var language1_level=document.getElementById('language1_level').value;
+  var language2_value=document.getElementById('language2_value').value;
+  var language2_value=document.getElementById('language2_level').value;
+  var skill1_value=document.getElementById('skill1_value').value;
+  var skill1_level=document.getElementById('skill1_level').value;
+  var skill2_value=document.getElementById('skill2_value').value;
+  var skill2_level=document.getElementById('skill2_level').value;
+  var skill3_value=document.getElementById('skill3_value').value;
+  var skill3_level=document.getElementById('skill3_level').value;
+  var skill4_value=document.getElementById('skill4_value').value;
+  var skill4_level=document.getElementById('skill4_level').value;
+  var alevel_value=document.getElementById('alevel_value').value;
+  var alevel_start=document.getElementById('alevel_start').value;
+  var olevel_start=document.getElementById('olevel_start').value;
+  var alevel_end=document.getElementById('alevel_end').value;
+  var olevel_end=document.getElementById('olevel_end').value;
+  var alevel_school=document.getElementById('alevel_school').value;
+  var alevel_grade=document.getElementById('alevel_grade').value;
+  var olevel_value=document.getElementById('olevel_value').value;
+  var olevel_school=document.getElementById('olevel_school').value;
+  var olevel_grade=document.getElementById('olevel_grade').value;
+  var grad_value=document.getElementById('grad_value').value;
+  var grad_school=document.getElementById('grad_school').value;
+  var grad_grade=document.getElementById('grad_grade').value;
+  var grad_start=document.getElementById('grad_start').value;
+  var grad_end=document.getElementById('grad_end').value;
+  var cert1_value=document.getElementById('cert1_value').value;
+  var cert1_provider=document.getElementById('cert1_provider').value;
+  var cert1_grade=document.getElementById('cert1_grade').value;
+  var cert2_value=document.getElementById('cert2_value').value;
+  var cert2_provider=document.getElementById('cert2_provider').value;
+  var cert2_grade=document.getElementById('cert2_grade').value;
+  var language1_value=document.getElementById('language1_value').value;
+  var language1_level=document.getElementById('language1_level').value;
+  var language2_value=document.getElementById('language2_value').value;
+  var language2_level=document.getElementById('language2_level').value;
+  var skill1_value=document.getElementById('skill1_value').value;
+  var skill1_level=document.getElementById('skill1_level').value;
+  var skill2_value=document.getElementById('skill2_value').value;
+  var skill2_level=document.getElementById('skill2_level').value;
+  var skill3_value=document.getElementById('skill3_value').value;
+  var skill3_level=document.getElementById('skill3_level').value;
+  var skill4_value=document.getElementById('skill4_value').value;
+  var skill4_level=document.getElementById('skill4_level').value;
+  var o_start=document.getElementById('o_start');
+  var o_end=document.getElementById('o_end');
+  var a_start=document.getElementById('a_start');
+  var a_end=document.getElementById('a_end');
+  var b_start=document.getElementById('b_start');
+  var b_end=document.getElementById('b_end');
+  first_div.style.display = "none";
+  second_div.style.display="block";
+  first_n.innerHTML=first_name;
+  second_n.innerText=second_name;
+  address_.innerText=address;
+  cell_no.innerText=phone_no;
+  mail.innerText=email;
+  fb.href=facebook_link;
+  fb.innerText=first_name+" "+second_name;
+  matric_title.innerText=alevel_value;
+  matric_board.innerText=alevel_school;
+  matric_grade.innerText=alevel_grade;
+  inter_title.innerText=olevel_value;
+  inter_board.innerText=olevel_school;
+  inter_grade.innerText=olevel_grade;
+  bach_title.innerText=grad_value;
+  bach_board.innerText=grad_school;
+  bach_grade.innerText=grad_grade;
+  cer1_value.innerText=cert1_value;
+  cer1_provider.innerText=cert1_provider;
+  cer1_grade.innerText=cert1_grade;
+  cer2_value.innerText=cert2_value;
+  cer2_provider.innerText=cert2_provider;
+  cer2_grade.innerText=cert2_grade;
+  lang1_value.innerText=language1_value;
+  lang2_value.innerText=language2_value;
+  lang1_bar.style.width=language1_level*2.5+'px';
+  lang2_bar.style.width=language2_level*2.5+'px';
+  skill1.innerText=skill1_value;
+  skill2.innerText=skill2_value;
+  skill3.innerText=skill3_value;
+  skill4.innerText=skill4_value;
+  skill4_val.style.width=skill4_level*2.5+'px';
+  skill3_val.style.width=skill3_level*2.5+'px';
+  skill2_val.style.width=skill3_level*2.5+'px';
+  skill1_val.style.width=skill1_level*2.5+'px';
+   var d=new Date(olevel_start);
+  var olevel_star=d.getFullYear();
+  var dd=new Date(alevel_start);
+  var alevel_star=dd.getFullYear();
+  a_start.innerText=alevel_star;
+  o_start.innerText=olevel_star;
+  ////////////////////////////////
+  var d4=new Date(olevel_end);
+  var olevel_en=d4.getFullYear();
+  var d5=new Date(alevel_end);
+  var alevel_en=d5.getFullYear();
+  a_end.innerText=alevel_en;
+  o_end.innerText=olevel_en;
+  /////////////////////////////////
+  var d6=new Date(grad_start).getFullYear();
+  b_start.innerText=d6;
+  var d7=new Date(grad_end).getFullYear();
+  b_end.innerText=d7;
+  //////////////////////////////////////////
+  cer1_val.innerText=cert1_provider;
+  cer2_val.innerText=cert2_provider;
+
+  let file = document.getElementById('imgField').files[0];
+  console.log(file);
+
+  let reader = new FileReader()
+  reader.readAsDataURL(file);
+
+  console.log(reader.result);
+
+  reader.onloadend = function () {
+  document.getElementById('profile_img').src=reader.result;
+  };
+
+
+  
+  btn.style.display="none";
+}
+window.onload = function(){
+  document.getElementById("download")
+  .addEventListener("click", ()=>{
+    const pdf = this.document.getElementById("second_div");
+    console.log(pdf);
+    console.log(window);
+    html2pdf().from(pdf).save();
+
+
+  })
+}
+</script>
+</body>
+
+
+</html>
